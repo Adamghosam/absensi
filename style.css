@@ -1,0 +1,86 @@
+.uper{
+    text-transform: uppercase;
+
+}
+.bg-cus{
+    background-color: #C5EAC4;
+}
+.text-cus{
+    color: #065197;
+}
+.pt-color{
+    color: #29166F;
+}
+.fsize {
+    font-size: 5rem; /* Large font size */
+  }
+.masuk{
+    text-align: center;
+    font-size: 5rem;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    color: #065197;
+}
+
+
+body, .form-label, .btn {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .input-container {
+    position: relative;
+    width: 300px; /* Lebar input container */
+    margin-bottom: 20px; /* Jarak antar input */
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 400px; /* Lebar maksimum chat container */
+    margin: 20px auto; /* Margin atas bawah 20px, otomatis di tengah */
+    padding: 10px;
+    background-color: #f0f0f0; /* Warna latar belakang chat container */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow untuk efek elevasi */
+}
+
+.chat-message {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    margin-right: 10px; /* Jarak antara avatar dan pesan */
+}
+
+.avatar img {
+    width: 40px; /* Ukuran avatar */
+    height: 40px;
+    border-radius: 50%; /* Lingkaran untuk avatar */
+}
+
+.message {
+    flex: 1; /* Pesan mengambil sisa ruang */
+}
+
+.input-rounded {
+    border: none;
+    border-radius: 20px; /* Sudut melengkung untuk input */
+    padding: 10px 20px; /* Penyesuaian padding */
+    width: 100%; /* Lebar input */
+    box-sizing: border-box; /* Untuk mempertahankan lebar total */
+    font-size: 14px; /* Ukuran font */
+    outline: none;
+    background-color: #fff; /* Warna latar belakang input */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow untuk efek elevasi */
+}
+
+.input-rounded::placeholder {
+    color: #ccc; /* Warna placeholder */
+}
+
+.input-rounded:focus {
+    border: 1px solid #5c9bea; /* Warna border saat fokus */
+}
+
+
+
