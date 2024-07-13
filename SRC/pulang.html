@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="300" >
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+
+<title>Absen</title>
+<link type="text/css" href="css/style.css"  rel="stylesheet">
+</head>
+<body>
+<div class="header">
+      <div class="logo"><img src="images/logonamas.png"></div>
+      <div class="company">
+      </div>
+      <div class="barcde">
+        <label id="icon" for="name"> </label>
+        <input type="text" name="barcode" id="barcode" required autofocus />
+      </div>
+</div>
+<div class="container">
+  <div class="content">
+    <div class="kiri">
+      <div class="kiri-item1">
+        <div class="masuk">
+          <a href="masuk.html">PULANG</a>
+        </div>
+      </div>
+      <div class="kiri-item1">
+        <div class="jam" id="jm"></div>
+      </div>
+
+      <div class="kiri-item2">
+        <div class="kiri-item2-baris1">
+          <div class="pid">PID</div>
+          <div class="nopid">STL052017</div>
+        </div>
+        <div class="kiri-item2-baris1">
+          <div class="checkin">CHECKOUT</div>
+          <div class="jamcekin">17:05:15</div>
+         </div>
+
+         <div class="kiri-item2-baris1">
+          <div class="durasi">DURASI</div>
+          <div class="jamdurasi">10 JAM</div>
+         </div>
+		  <div class="kiri-item2-baris1">
+          <div class="overtime">OVERTIME</div>
+          <div class="jamovertime">0</div>
+         </div>
+ 
+         <div class="kiri-item2-baris1">
+          <div class="pesan">
+		  </div>
+         </div>  
+
+      </div>
+	 
+	<div class="qrcode">
+<div>Scan QR mendownload ASIK</div>
+    
+      </div>	
+
+    </div>
+
+    <div class="kanan">
+        <div class="kanan-item1">
+          <div class="img-circular">
+            <img src="" id="foto" alt="." />
+          </div>
+        </div>
+        <div class="kanan-item2">
+          <label class="nama">STARLIGHT</label>
+        </div>
+        <div class="kanan-item2">
+          <label class="dept"></label>
+        </div>
+        <div class="kanan-item3">
+          <div class="sign">            
+        </div>
+        <div class="kanan-item4">
+      <!--    <h5><span class="blink2">Download dari Play Store : higaras.com, plih baru dan install apk ASIK dan Rate 5.</span></h5>    -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="footer">
+	<h5><b><span class="blink">SCAN QR UNTUK DOWNLOAD ASIK</b></span></h5> 
+</div>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+ $("#foto").css('background-image',"url('images/fty.jpg')");
+      time();
+    });
+
+    $("#barcode").on('change', function() {
+
+      $("#foto").css('background-image',"url('')"); 
+      var pid = $("#barcode").val().toUpperCase();
+
+      if(pid !="") 
+      {
+      
+        $("#foto").css('background-image',"url('http://192.168.32.1/asik/images/" + pid +".jpg')");
+      }
+  
+    });
+
+ 
+  function time() {
+        a = new Date();
+        D1 = a.getDay();
+        D2 = a.getDate();
+        M = a.getMonth();
+        Y = a.getFullYear();
+        h = a.getHours();
+        m = a.getMinutes();
+        s = a.getSeconds();
+        if(h<10)
+          {
+            h = "0"+h;
+          }
+        if(m<10)
+        {
+          m = "0"+m;
+        }
+        if(s<10)
+        {
+          s = "0"+s;
+        }
+        var hari = Array("Minggu","Senin","Selasa","Rabu","Kamis","Jum'at","Sabtu");
+        var bulan = Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
+        $("#jm").html(h+":"+m+":"+s);
+        setTimeout("time()",1000);
+    }
+
+</script>
+</body>
+</html>

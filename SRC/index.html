@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Absen STL</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style>
+	</style>
+</head>
+<body>
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+				function CekJam(){
+						var today = new Date();
+						var jam = today.getHours();
+						if (jam < 12) {
+							window.location.replace("http://192.168.32.9/glory/absen_v2/masuk.html");
+							}
+						else
+						{
+							window.location.replace("http://192.168.32.9/glory/absen_v2/pulang.html");
+						}
+					}
+		window.onload = CekJam();
+
+</script>
+</body>
+</html>
